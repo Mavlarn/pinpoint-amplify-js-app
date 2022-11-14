@@ -74,21 +74,33 @@
         <hr />
 
         <h1>Goto page in link</h1>
-        <a href="index2.html" target="_blank">page link</a>
+        <a href="index2.html" target="_self">page link</a>
         <hr />
 
         <h1>Goto page in button</h1>
-        <button onclick="gotoPage()">Record Event</button> 
+        <button onclick="gotoPage()">page button</button> 
+
+        <h1>Update Endpoint</h1>
+        <button onclick="updateEndpoint()">Update Endpoint</button> 
+        
+        <hr />
       </div>
     </div>
     <script src="main.bundle.js"></script>
     <script>
+      function updateEndpoint() {
+        Analytics.updateEndpoint({
+          attributes: {
+            registeredDate: [new Date()]
+          }
+        })
+      }
       function recordEvent() {
         Analytics.record({ name: 'Custom_event1' });
       }
 
       function gotoPage() {
-        window.open('index2.html', '_blank');
+        window.location.href = "index2.html"
       }
     </script>
   </body>

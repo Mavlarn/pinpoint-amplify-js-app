@@ -68,17 +68,24 @@
         <h1>Welcome to Amplify</h1>
       </div>
       <div class="app-body">
+        <h1>Record Custom Event</h1>
+        <button onclick="recordEvent()">Record Event</button>
+        <hr />
+
         <h1>Go Back</h1>
-        <button onclick="back()">Go Back</button> 
-        
+        <button onclick="back()">Go Back</button>
         <hr />
 
       </div>
     </div>
     <script src="main.bundle.js"></script>
     <script>
+      function recordEvent() {
+        Analytics.record({ name: 'Custom_sub_event' });
+      }
       function back() {
-        history.back()
+        // history.back()
+        window.history.go(-1)
       }
     </script>
   </body>
