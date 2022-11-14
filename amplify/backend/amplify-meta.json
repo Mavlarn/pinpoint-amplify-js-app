@@ -1,0 +1,60 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyjsapp-dev-133145-authRole",
+      "UnauthRoleArn": "arn:aws:iam::568765279027:role/amplify-amplifyjsapp-dev-133145-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::568765279027:role/amplify-amplifyjsapp-dev-133145-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-amplifyjsapp-dev-133145-deployment",
+      "UnauthRoleName": "amplify-amplifyjsapp-dev-133145-unauthRole",
+      "StackName": "amplify-amplifyjsapp-dev-133145",
+      "StackId": "arn:aws:cloudformation:us-east-1:568765279027:stack/amplify-amplifyjsapp-dev-133145/a3efd700-63dd-11ed-bda7-0ae642554bcb",
+      "AmplifyAppId": "d39nrrswky58lm"
+    }
+  },
+  "auth": {
+    "amplifyjsapp": {
+      "service": "Cognito",
+      "serviceType": "managed",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": []
+        },
+        "mfaTypes": [],
+        "verificationMechanisms": []
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyjsapp-dev-133145-deployment/amplify-cfn-templates/auth/amplifyjsapp-cloudformation-template.json",
+        "logicalId": "authamplifyjsapp"
+      },
+      "lastPushTimeStamp": "2022-11-14T05:45:58.777Z",
+      "output": {
+        "IdentityPoolId": "us-east-1:c923c1f1-285a-4b1d-acad-c19c61c2287f",
+        "IdentityPoolName": "amplifyjsapp_identitypool_c488c3e3__dev"
+      },
+      "lastPushDirHash": "g9FupYRdCL5eIGNFBCTY4vaJgKk="
+    }
+  },
+  "analytics": {
+    "amplifyjsapp": {
+      "service": "Pinpoint",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyjsapp-dev-133145-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
+        "logicalId": "analyticsamplifyjsapp"
+      },
+      "lastPushTimeStamp": "2022-11-14T05:45:58.777Z",
+      "output": {
+        "appName": "amplifyjsapp-dev",
+        "Region": "us-east-1",
+        "Id": "1e4f01b0a02c495d96c9c8410eac246e"
+      },
+      "lastPushDirHash": "k6fdKAlNuEJd//s21WDzQTviEyI="
+    }
+  }
+}
